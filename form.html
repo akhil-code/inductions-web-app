@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Test | EmR</title>
+
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="img/cropped-EMR-Club-20150921_223636-32x32.jpg" sizes="32x32">
+</head>
+
+<body background="img/background1.jpg">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <img align="left" style="margin-top:5px;margin-bottom:5px;margin-right:10px;" src="img/emrLogo.png" alt="emr logo" height="42" width="42">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="index.html" style="color:white;margin-right:30px;">EmR Club</a>
+        <p class="navbar-brand" style="color:white;" id="demo"></p>
+      </div>
+
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="form.html">Test</a></li>
+            <li><a href="feedBack.html">Feedback</a></li>
+            <li><a href="admin.php">Admin (final year only)</a></li>
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" >
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+              <br><br>
+              <h1 class="page-header">Test</h1>
+            </div>
+        </div>
+
+        <div class="row" >
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      Answer all the questions (No Negative marking)<br/>
+                      Weightage: 40% Test + 60% Interview
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <form id="myForm" role="form" action="php/submitTest.php" method="post">
+                                  <h2>Personal Details</h2><br/>
+                                  <div class="form-group">
+                                    <!-- name -->
+                                    <label>Full Name</label>
+                                    <input class="form-control" name="Name" required>
+                                  </div>
+                                  <br>
+
+                                  <!-- branch -->
+                                  <div class="form-group">
+                                      <label>Branch</label>
+                                      <div class="radio">
+                                        <label>
+                                          <input type="radio" name="Branch" id="optionsRadios3" value="CS">Computer Science
+                                        </label>
+                                      </div>
+                                      <div class="radio">
+                                        <label>
+                                          <input type="radio" name="Branch" id="optionsRadios3" value="Civil">Civil
+                                        </label>
+                                      </div>
+                                      <div class="radio">
+                                          <label>
+                                              <input type="radio" name="Branch" id="optionsRadios1" value="ECE">ECE
+                                          </label>
+                                      </div>
+                                      <div class="radio">
+                                          <label>
+                                              <input type="radio" name="Branch" id="optionsRadios2" value="Electrical">Electrical
+                                          </label>
+                                      </div>
+                                      <div class="radio">
+                                          <label>
+                                              <input type="radio" name="Branch" id="optionsRadios3" value="IT">Information Technology
+                                          </label>
+                                      </div>
+                                      <div class="radio">
+                                          <label>
+                                              <input type="radio" name="Branch" id="optionsRadios3" value="Mechanical">Mechanical
+                                          </label>
+                                      </div>
+                                      <div class="radio">
+                                          <label>
+                                              <input type="radio" name="Branch" id="optionsRadios3" value="Production">Production
+                                          </label>
+                                      </div>
+                                  </div>
+                                  <br>
+
+                                  <!-- year -->
+                                  <div class="form-group">
+                                    <label>Year</label>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="year" id="optionsRadios3" value="1st">1st
+                                      </label>
+                                    </div>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="year" id="optionsRadios3" value="2nd">2nd
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <br>
+
+                                  <!-- phone -->
+                                  <div class="form-group">
+                                    <label>Phone</label>
+                                    <input class="form-control" type="tel" name="Phone" required>
+                                  </div>
+                                  <br>
+
+                                  <!-- email -->
+                                  <div class="form-group">
+                                    <label>Email</label>
+                                    <input class="form-control" name="Email" required>
+                                  </div>
+                                  <br>
+
+                                  <div class="form-group">
+                                      <label>Github link</label>
+                                      <input class="form-control" name="Github">
+                                      <p class="help-block">Write <b><i>None</i></b> if you don't have github account.</p>
+
+                                  </div>
+                                  <br>
+
+                                  <div class="form-group">
+                                    <label>Attended recent workshop of EmR (Proteus Simulation) : </label><br/>
+                                    <label class="radio-inline">
+                                      <input type="radio" name="recentWorkshop" id="optionsRadiosInline1" value="Yes">Yes
+                                    </label>
+                                    <br/>
+                                    <label class="radio-inline">
+                                      <input type="radio" name="recentWorkshop" id="optionsRadiosInline2" value="No">No
+                                    </label>
+                                  </div>
+                                  <br>
+
+                                  <div class="form-group">
+                                      <label>Already member of EmR : </label><br/>
+                                      <label class="radio-inline">
+                                          <input type="radio" name="Member" id="optionsRadiosInline1" value="Yes">Yes
+                                      </label>
+                                      <br/>
+                                      <label class="radio-inline">
+                                          <input type="radio" name="Member" id="optionsRadiosInline2" value="No">No
+                                      </label>
+                                  </div>
+                                  <br>
+
+
+                                  <div class="form-group">
+                                      <label>Projects</label>
+                                      <textarea class="form-control" rows="4" name="Projects"></textarea>
+                                      <p class="help-block">Donot elaborate. Only list them if you have any or else leave it empty.</p>
+                                  </div>
+                                  <br>
+
+                                  <div class="form-group">
+                                      <label>Participation</label>
+                                      <textarea class="form-control" rows="3" name="Participation"></textarea>
+                                      <p class="help-block">Donot elaborate. Only list them if you have any or else leave it empty.</p>
+                                  </div>
+                                  <br>
+
+                                  <h2>Aptitude</h2><br/>
+
+
+<!-- q1 -->
+<div class="form-group">
+    <label>1. Find the odd one out: 396, 462, 572, 427, 671, 264</label>
+    <div class="radio">
+        <label>
+            <input type="radio" name="1" id="optionsRadios1" value="1">427
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="1" id="optionsRadios2" value="2">572
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="1" id="optionsRadios3" value="3">671
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="1" id="optionsRadios3" value="4">264
+        </label>
+    </div>
+</div>
+<br>
+
+
+<!-- q2 -->
+<div class="form-group">
+    <label>2. A train passes a station platform in 36 seconds and a man standing on the platform in 20 seconds. If the speed of the train is 54 km/hr, what is the length of the platform?</label>
+    <div class="radio">
+        <label>
+            <input type="radio" name="2" id="optionsRadios1" value="1">120m
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="2" id="optionsRadios2" value="2">240m
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="2" id="optionsRadios3" value="3">300m
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="2" id="optionsRadios3" value="4">None
+        </label>
+    </div>
+</div>
+<br>
+
+<!-- q3 -->
+<div class="form-group">
+    <label>3.
+A, B and C can do a piece of work in 20, 30 and 60 days respectively. In how many days can A do the work if he is assisted by B and C on every third day?
+</label>
+    <div class="radio">
+        <label>
+            <input type="radio" name="3" id="optionsRadios1" value="1">12 days
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="3" id="optionsRadios2" value="2">15 days
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="3" id="optionsRadios3" value="3">16 days
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="2" id="optionsRadios3" value="4">20 days
+        </label>
+    </div>
+</div>
+<br>
+
+
+<!-- q4-->
+<div class="form-group">
+    <label>4. candle :: hut : lamp :: cottage : floodlight : ?
+</label>
+    <div class="radio">
+        <label>
+            <input type="radio" name="4" id="optionsRadios1" value="1">tent
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="4" id="optionsRadios2" value="2">city
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="4" id="optionsRadios3" value="3">dwelling
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="4" id="optionsRadios3" value="4">house
+        </label>
+    </div>
+</div>
+<br>
+
+<!-- q5-->
+<div class="form-group">
+    <label>5. Four friends in the sixth grade were sharing a pizza. They decided that the oldest friend would get the extra piece. Randy is two months older than Greg, who is three months younger than Ned. Kent is one month older than Greg. Who should get the extra piece of pizza?
+</label>
+    <div class="radio">
+        <label>
+            <input type="radio" name="5" id="optionsRadios1" value="1">RANDY
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="5" id="optionsRadios2" value="2">GREG
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="5" id="optionsRadios3" value="3">NED
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="5" id="optionsRadios3" value="4">KENT
+        </label>
+    </div>
+</div>
+<br>
+
+
+<!-- q6-->
+<div class="form-group">
+    <label>6. Select a figure from the given four alternatives which fits exactly into Figure-X to form a complete square.
+</label>
+ <img src="img/6ques.png" class="img-rounded" alt="6img">
+    <div class="radio">
+        <label>
+            <input type="radio" name="6" id="optionsRadios1" value="1">1
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="6" id="optionsRadios2" value="2">2
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="6" id="optionsRadios3" value="3">3
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="6" id="optionsRadios3" value="4">4
+        </label>
+    </div>
+</div>
+<br>
+
+<!-- q7-->
+<div class="form-group">
+    <label>7. A two-digit number is such that the product of the digits is 8. When 18 is added to the number, then the digits are reversed. The number is:
+</label>
+    <div class="radio">
+        <label>
+            <input type="radio" name="7" id="optionsRadios1" value="1">18
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="7" id="optionsRadios2" value="2">24
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="7" id="optionsRadios3" value="3">42
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="7" id="optionsRadios3" value="4">81
+        </label>
+    </div>
+</div>
+<br>
+
+<!-- q8-->
+<div class="form-group">
+    <label>8. In the first 10 overs of a cricket game, the run rate was only 3.2. What should be the run rate in the remaining 40 overs to reach the target of 282 runs?
+</label>
+    <div class="radio">
+        <label>
+            <input type="radio" name="8" id="optionsRadios1" value="1">6.25
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="8" id="optionsRadios2" value="2">6.5
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="8" id="optionsRadios3" value="3">6.75
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="8" id="optionsRadios3" value="4">7
+        </label>
+    </div>
+</div>
+<br>
+
+<!-- q9-->
+<div class="form-group">
+    <label>9. A vendor bought toffees at 6 for a rupee. How many for a rupee must he sell to gain 20%
+</label>
+    <div class="radio">
+        <label>
+            <input type="radio" name="9" id="optionsRadios1" value="1">3
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="9" id="optionsRadios2" value="2">5
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="9" id="optionsRadios3" value="3">6
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="9" id="optionsRadios3" value="4">4
+        </label>
+    </div>
+</div>
+<br>
+
+<!-- q10-->
+<div class="form-group">
+    <label>10. If log7 = a, then log(1/70) is equal to?
+</label>
+    <div class="radio">
+        <label>
+            <input type="radio" name="10" id="optionsRadios1" value="1">-(1+a)
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="10" id="optionsRadios2" value="2">(1 + a)-1
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="10" id="optionsRadios3" value="3">a/10
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="10" id="optionsRadios3" value="4">1/(10a)
+        </label>
+    </div>
+</div>
+<br>
+
+<h2>Basic Electronics</h2><br/>
+
+<!-- q11-->
+<div class="form-group">
+    <label>11. What is the current through R1 and R2 in Diagram ?
+    <img src="img/11ques.png" class="img-rounded" alt="6img">
+</label>
+    <div class="radio">
+        <label>
+            <input type="radio" name="11" id="optionsRadios1" value="1">I1 = 1A and I2 = 25A
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="11" id="optionsRadios2" value="2">I1 = 0.1A and I2 = 0.1667A
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="11" id="optionsRadios3" value="3">I1 = 1A and I2 = 1.667A
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="11" id="optionsRadios3" value="4">I1 = 10A and I2 = 16.67A
+        </label>
+    </div>
+</div>
+<br>
+
+<!-- q12-->
+<div class="form-group">
+    <label>12. If you put an infinite number of resistors in parallel, what would the total resistance be?
+</label>
+    <div class="radio">
+        <label>
+            <input type="radio" name="12" id="optionsRadios1" value="1">R total would approach Zero as The No. of Resistors In parallel Approaches Infinity
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="12" id="optionsRadios2" value="2">R total would approach 1 as The No. of Resistors In parallel Approaches Infinity.
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="12" id="optionsRadios3" value="3">It is not possible to connect that Number of Resistors in parallel.
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="12" id="optionsRadios3" value="4">None of the above
+        </label>
+    </div>
+</div>
+<br>
+
+<!-- q13-->
+<div class="form-group">
+    <label>13. Why do we say the "voltage across" or "the voltage with respect to?" Why can't we just say
+voltage?
+</label>
+    <div class="radio">
+        <label>
+            <input type="radio" name="13" id="optionsRadios1" value="1">Voltage is a measure of Electric Potential difference between two electrical points.
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="13" id="optionsRadios2" value="2">It's an Electrical Cliche'.
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="13" id="optionsRadios3" value="3">dThe other point could be Negative or positive.
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="13" id="optionsRadios3" value="4">None of the above.
+        </label>
+    </div>
+</div>
+<br>
+
+<!-- q14-->
+<div class="form-group">
+    <label>14. With 21 V applied, if R 1 = 5 ohms, R 2 = 35 ohms, and R 3 = 14 ohms, what is the current of R 2 if
+R 1 is series connected with parallel circuit R 2 and R 3 ?
+</label>
+
+    <div class="radio">
+        <label>
+          <input type="radio" name="14" id="optionsRadios1" value="1">200mA
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="14" id="optionsRadios2" value="2">800mA
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="14" id="optionsRadios3" value="3">600mA
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="14" id="optionsRadios3" value="4">400mA
+        </label>
+    </div>
+</div>
+<br>
+
+
+<!-- q15-->
+<div class="form-group">
+    <label>15. What is the total resistance?
+    <img src="img/15ques.png" class="img-rounded" alt="6img">
+
+</label>
+    <div class="radio">
+        <label>
+          <input type="radio" name="15" id="optionsRadios1" value="1">800 ohm
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="15" id="optionsRadios2" value="2">1.2 k ohm
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="15" id="optionsRadios3" value="3">1.6 k ohm
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="15" id="optionsRadios3" value="4">1.8 k ohm (ans)
+        </label>
+    </div>
+</div>
+<br>
+
+<!-- q16-->
+<div class="form-group">
+    <label>16. Decimal number 10 is equal to binary number:
+</label>
+    <div class="radio">
+        <label>
+          <input type="radio" name="16" id="optionsRadios1" value="1">1110
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="16" id="optionsRadios2" value="2">1010
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="16" id="optionsRadios3" value="3">1001
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="16" id="optionsRadios3" value="4">1000
+        </label>
+    </div>
+</div>
+<br>
+
+
+<!-- q17-->
+<div class="form-group">
+    <label>17. he circuit of the given figure realizes the function
+    <img src="img/17ques.png" class="img-rounded" alt="6img">
+
+</label>
+    <div class="radio">
+        <label>
+          <input type="radio" name="17" id="optionsRadios1" value="1">Y = (not A + not B) C + not (DE)
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="17" id="optionsRadios2" value="2">Y = not A +not B +not C +not D +not E
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="17" id="optionsRadios3" value="3">AB + C +DE
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="17" id="optionsRadios3" value="4">AB + C(D + E)
+        </label>
+    </div>
+</div>
+<br>
+
+<!-- q18-->
+<div class="form-group">
+    <label>18. Four inputs A, B, C, D are fed to a NOR gate. The output of NOR gate is fed to an inverter. The
+output of inverter is
+</label>
+    <div class="radio">
+        <label>
+          <input type="radio" name="18" id="optionsRadios1" value="1">A + B + C + D
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="18" id="optionsRadios2" value="2">not (A + B + C + D)
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="18" id="optionsRadios3" value="3">ABCD
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="18" id="optionsRadios3" value="4">not(ABCD)
+        </label>
+    </div>
+</div>
+<br>
+
+
+<!-- q19-->
+<div class="form-group">
+    <label>19. Which of the following is used as command to write 0b00101111 to port A?
+</label>
+    <div class="radio">
+        <label>
+          <input type="radio" name="19" id="optionsRadios1" value="1">PORTA = 0x2F;
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="19" id="optionsRadios2" value="2">PINA = 0b00101111;
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="19" id="optionsRadios3" value="3">PORTA = 0x2E;
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="19" id="optionsRadios3" value="4">PINA = 0x2E;
+        </label>
+    </div>
+</div>
+<br>
+
+<!-- q20-->
+<div class="form-group">
+    <label>20. Frequency of crystal oscillator used in Atmega8 ?
+</label>
+    <div class="radio">
+        <label>
+          <input type="radio" name="20" id="optionsRadios1" value="1">10MHz
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="20" id="optionsRadios2" value="2">12 MHz
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="20" id="optionsRadios3" value="3">8 MHz
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="20" id="optionsRadios3" value="4">16 MHz
+        </label>
+    </div>
+</div>
+<br>
+
+                                  <button type="submit" style="background:#1a6600" class="btn btn-default"><span style="color:white">Submit</span></button>
+                                  <button type="reset" style="background:#f9f906" class="btn btn-default"><span>Reset</span></button>
+                                </form>
+                            </div>
+                            <!-- /.col-lg-6 (nested) -->
+
+                        </div>
+                        <!-- /.row (nested) -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /#page-wrapper -->
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>EmR Club</strong>
+                    </h4>
+                    <p>NIT Kurukshetra</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">emrclub.nitkkr@gmail.com</a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <!-- <p class="text-muted">developed by Ag</p> -->
+                    <p class="text-muted"><xmp><develop> Ag </design></xmp></p>
+                    <p class="text-muted">Copyright &copy; EmR club NIT Kurukshetra 2017</p>
+
+                </div>
+            </div>
+        </div>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>
+
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <script>
+      // Set the date we're counting down to
+      // var countDownDate = new Date("Jan 5, 2018 15:37:25").getTime();
+      var countDownDate = new Date().getTime()+30*60000;
+
+
+      // Update the count down every 1 second
+      var x = setInterval(function() {
+
+          // Get todays date and time
+          var now = new Date().getTime();
+
+          // Find the distance between now an the count down date
+          var distance = countDownDate - now;
+
+          // Time calculations for days, hours, minutes and seconds
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          // Output the result in an element with id="demo"
+          document.getElementById("demo").innerHTML = minutes + "m:" + seconds + "s ";
+
+          // If the count down is over, write some text
+          if (distance < 0) {
+            //todo
+            document.getElementById("myForm").submit();
+          }
+      }, 1000);
+    </script>
+
+    <!-- Custom Theme JavaScript -->
+    <!-- <script src="../dist/js/sb-admin-2.js"></script> -->
+
+  </div>
+</body>
+
+</html>
